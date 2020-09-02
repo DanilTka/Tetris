@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BE0D830-9AFC-42CF-83F3-D5E46A858FAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tetris_</RootNamespace>
+    <AssemblyName>Tetris+</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Acer\Desktop\T\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Tetris+</ProductName>
+    <PublisherName>Daniil Tkachev</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>512x512bb.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AlertWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertWin.designer.cs">
+      <DependentUpon>AlertWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGameForm.designer.cs">
+      <DependentUpon>MainGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlertWin.resx">
+      <DependentUpon>AlertWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGameForm.resx">
+      <DependentUpon>MainGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="512x512bb.ico" />
+    <EmbeddedResource Include="bin\Debug\playlist.txt" />
+    <EmbeddedResource Include="bin\Debug\playlistName.txt" />
+    <EmbeddedResource Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\stan2lev2.png" />
+    <EmbeddedResource Include="Resources\560x577Load.png" />
+    <EmbeddedResource Include="Resources\Load.png" />
+    <EmbeddedResource Include="Resources\Фон для управления.png" />
+    <EmbeddedResource Include="Resources\Управление.png" />
+    <EmbeddedResource Include="Resources\zigzaglev3.png" />
+    <EmbeddedResource Include="Resources\stan2lev3.jpg" />
+    <EmbeddedResource Include="Resources\squarelev3.png" />
+    <EmbeddedResource Include="Resources\linelev3.png" />
+    <EmbeddedResource Include="Resources\humplev3.png" />
+    <EmbeddedResource Include="Resources\bedlev3.png" />
+    <EmbeddedResource Include="Resources\anglelev3.png" />
+    <EmbeddedResource Include="Resources\squarelev2.png" />
+    <EmbeddedResource Include="Resources\linelev2.png" />
+    <EmbeddedResource Include="Resources\humplev2.png" />
+    <EmbeddedResource Include="Resources\bedlev2.png" />
+    <EmbeddedResource Include="Resources\anglelev2.png" />
+    <EmbeddedResource Include="Resources\zigzaglev2.png" />
+    <EmbeddedResource Include="Resources\bedlev1.png" />
+    <EmbeddedResource Include="Resources\anglelev1.png" />
+    <EmbeddedResource Include="Resources\zigzaglev1.png" />
+    <EmbeddedResource Include="Resources\stan2lev1.jpg" />
+    <EmbeddedResource Include="Resources\squarelev1.png" />
+    <EmbeddedResource Include="Resources\linelev1.png" />
+    <EmbeddedResource Include="Resources\humplev1.png" />
+    <EmbeddedResource Include="Resources\wire.png" />
+    <EmbeddedResource Include="Resources\438Х577.png" />
+    <EmbeddedResource Include="Resources\Play.png" />
+    <EmbeddedResource Include="Resources\kartinki.me-763.jpg" />
+    <EmbeddedResource Include="Resources\ForScores.png" />
+    <EmbeddedResource Include="Resources\Dragon!438x607.png" />
+    <EmbeddedResource Include="Resources\ВЫКЛЛ.png" />
+    <EmbeddedResource Include="Resources\Водопад.jpg" />
+    <EmbeddedResource Include="Resources\PalmLeaf3.png" />
+    <EmbeddedResource Include="Resources\438х607Jungle.png" />
+    <EmbeddedResource Include="Resources\Ручей.jpg" />
+    <EmbeddedResource Include="Resources\Дракон3.jpg" />
+    <EmbeddedResource Include="Resources\Дракон2.jpg" />
+    <EmbeddedResource Include="Resources\ВКЛЛ.png" />
+    <EmbeddedResource Include="Resources\Крест.png" />
+    <EmbeddedResource Include="Resources\transparency.png" />
+    <EmbeddedResource Include="Resources\ВКЛ.png" />
+    <EmbeddedResource Include="Resources\Пляж1.jpg" />
+    <EmbeddedResource Include="Resources\Пляж3.jpg" />
+    <EmbeddedResource Include="Resources\Пляж2.jpg" />
+    <EmbeddedResource Include="Resources\Pause2.png" />
+    <EmbeddedResource Include="Resources\Pause.png" />
+    <EmbeddedResource Include="Resources\HelloBackGround2.png" />
+    <EmbeddedResource Include="Resources\UserControlBackGround.png" />
+    <EmbeddedResource Include="Resources\Sign8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UserControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".exe">
+      <Visible>False</Visible>
+      <Description>nothing</Description>
+      <Progid>Tetris+</Progid>
+      <DefaultIcon>512x512bb.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
